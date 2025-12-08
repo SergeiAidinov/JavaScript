@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var gift = ['cheese', 'fruit', 'wine', 'cake'];
+        // prompt может вернуть null или строку
+        var name = prompt("Enter your name:");
+        function hello(name, gift) {
+        // Надёжная проверка
+        if (name === null || name.trim().length === 0 || name === undefined) {
+            name = "Incognito";
+        }
+            console.log(`Hello and welcome, ${name}!`);         
+            for (const example of gift){
+                console.log(`Would you like some ${example}, ${name}!`);
+            }
+        } 
+        hello(name, gift);
+    </script>
+</body>
+</html>
